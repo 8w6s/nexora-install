@@ -6,8 +6,12 @@ One-command setup for the Nexora storefront.
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/8w6s/nexora-install/main/install.sh \
-  | INVOICE=inv_2026_001 TOKEN=ghp_yourPAT bash
+  | INVOICE=inv_2026_001 bash
 ```
+
+If your fleet uses a private GHCR namespace, also pass
+`TOKEN=ghp_yourPAT` (read:packages). For the default public image, the
+token is not required.
 
 That's the whole install. The script:
 
@@ -35,7 +39,7 @@ When it's done you'll see:
 | env var | what it is |
 |---|---|
 | `INVOICE` | Your invoice id (`inv_2026_001`, given to you when you paid). |
-| `TOKEN`   | A GitHub fine-grained PAT scoped `read:packages` (so the host can pull your private image from GHCR). |
+| `TOKEN`   | (optional) GitHub PAT with `read:packages`. Only needed when the Nexora image is private; the default release line is public. |
 
 ## Optional inputs
 
