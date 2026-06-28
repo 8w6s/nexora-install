@@ -1,4 +1,5 @@
 #Requires -Version 5.1
+# Build:  20260628T051359Z
 <#
 .SYNOPSIS
     Nexora interactive setup for Windows (PowerShell 5.1 + 7).
